@@ -1,0 +1,16 @@
+<script columns="8">
+import cn.zjc.bean.Cat;
+import cn.zjc.util.DateUtils;
+
+Cat e = new Cat();
+e.name=r[1];
+e.age=r[2];
+e.birthday=DateUtils.str2Date(r[3],"yyyy-MM-dd");
+e.price=Long.parseLong(r[4]);
+e.isalive=r[5];
+e.weight=Float.valueOf(r[6]);
+return e;
+</script>
+
+//id,......
+1,tom,2,2015-02-05,120,true,2.5

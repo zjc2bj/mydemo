@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.liantuo.domain.ShengYiNotifyRecord" table="shengyi_notify_record"  >
+		<id name="id" type="java.lang.Integer">
+			<column name="id" />
+			<generator class="native"></generator>
+		</id>     
+		<property name="gmtCreated" type="java.util.Date">
+			<column name="gmt_created"  not-null="true" />
+		</property>		
+		<property name="gmtDeal" type="java.util.Date">
+			<column name="gmt_deal" not-null="false" />
+		</property>		
+		<property name="reqTxt" type="java.lang.String">
+            <column name="req_txt" not-null="true"  />
+        </property>    
+         <property name="rspTxt" type="java.lang.String">
+            <column name="rsp_txt" not-null="false"  />
+        </property>
+        <property name="status" type="java.lang.Integer">
+            <column name="status" length="10" not-null="true"  />
+        </property> 
+        <property name="busType" type="java.lang.Integer">
+            <column name="bus_type" length="10" not-null="false"  />
+        </property> 
+        <property name="retryTimes" type="java.lang.Integer">
+            <column name="retry_times" length="10" not-null="false"  />
+        </property> 
+        <property name="outOrderNo" type="java.lang.String">
+            <column name="out_order_no" length="64" not-null="true"  />
+        </property>
+        <property name="reqUrl" type="java.lang.String">
+            <column name="req_url" length="255" not-null="true"  />
+        </property>
+        <property name="remark" type="java.lang.String">
+            <column name="remark" not-null="false"  />
+        </property>               
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<integrators>
+	<integrator>
+		<code>1</code>
+		<name>胜意</name>
+		<channel>10100003</channel>
+	</integrator>
+	<integrator>
+		<code>2</code>
+		<name>小太阳</name>
+		<channel>10100015</channel>
+	</integrator>
+	<integrator>
+		<code>3</code>
+		<name>聚合</name>
+		<channel>101100016</channel>
+	</integrator>
+	<integrator>
+		<code>4</code>
+		<name>万途</name>
+		<channel>10100015</channel>
+	</integrator>
+</integrators>

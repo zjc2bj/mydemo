@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<script>
+function onload(){  
+	//Gui.initDict(ticketSearch.issueType,issueType,"$!{outTicketVo.issueType}","所有")	//初始化出票方式列表
+	//Gui.initDict(ticketSearch.isSpecialPolicyType,isSpecialPolicyType,"$!{outTicketVo.isSpecialPolicyType}","全部政策")	//初始化政策列表
+	//Gui.initDict(ticketSearch.airlineCode,airlineCode,"$!{outTicketVo.airlineCode}","全部")
+	Gui.initDict(ticketSearch.issueType,issueType,"$!outTicketVo.issueType")	//初始化出票方式列表
+	Gui.initDict(ticketSearch.isSpecialPolicyType,isSpecialPolicyType,"$!outTicketVo.isSpecialPolicyType")	//初始化政策列表
+	Gui.initDict(ticketSearch.airlineCode,airlineCode,"$!{outTicketVo.airlineCode}")
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>

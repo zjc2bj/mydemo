@@ -1,0 +1,24 @@
+1.request请求转换为实体bean
+	<1>.字段赋值
+	<2>.null值赋值及校验
+	-->回调函数
+
+2.实体转换测试用例bean1-->bean2
+	<1>.两个bean 名称相同和名称不同的转换（无注解映射不转换）
+	<2>.null值的转化 如果bean1为null 是否覆盖bean2的相应字段
+	<3>.bean字段的初始化 在bean1转换到bean2中 如果bean1无字段值  bean2对应字段的初始化（包括反向转换）
+	<4>.反向转换(包含3)
+	<5>.映射bean2的class类型，以支持映射多实体
+	<6>.字段值范围限制。如只能取 A 或 B 或 C的枚举值
+	-->回调函数
+
+注解：
+@AccessorType(AccessType.FIELD)
+
+@BeanFiledMapping（class="com.liantuo.Mechent",fieldName="id",nullCover="true",inversNullCover="false", defaultValue="13245"）
+
+
+3.form表单-->实体bean
+	<1>.字段赋值
+	<2>.null值赋值及校验
+	-->回调函数
