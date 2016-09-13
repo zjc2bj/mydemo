@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	 version="2.5">
+	 
+	<display-name>filetools</display-name>
+	
+	<!-- 项目应用根Key值 -->
+	<context-param>
+		<param-name>webAppRootKey</param-name>
+		<param-value>file_tools</param-value>
+	</context-param>
+	
+	<!-- 项目Log4j配置 -->
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>/WEB-INF/classes/config/properties/web.log4j.properties</param-value>
+	</context-param>
+  <servlet>
+    <servlet-name>ValidateServlet</servlet-name>
+    <servlet-class>cn.zjc.validation.ValidateServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ValidateServlet</servlet-name>
+    <url-pattern>/servlet/ValidateServlet</url-pattern>
+  </servlet-mapping>
+	
+	<!-- 项目Session超时时间设置 -->
+	<session-config>
+		<session-timeout>720</session-timeout>
+	</session-config>
+	
+	<!-- 项目黄页配置 -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/404.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/500.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/500.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.NullPointerException</exception-type>
+		<location>/500.jsp</location>
+	</error-page>
+	<error-page>
+		<exception-type>javax.servlet.ServletException</exception-type>
+		<location>/500.jsp</location>
+	</error-page>
+	
+	<!-- 项目欢迎文件定义 -->
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>

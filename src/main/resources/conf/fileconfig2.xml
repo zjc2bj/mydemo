@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+	<!-- 输出路径若无配置  则取默认的路径-->
+	<defaultOutputPath>c:/result.txt</defaultOutputPath>
+	
+	<folders>
+		<folder output="c:/foldersResult.txt">
+			<group fielpath1="C:\1122\petrocard-appserver-1.7.2-5.war" filepath2="C:\1122\petrocard-appserver-1.7.2-5.war1" />
+			<!-- <group fielpath1="c:/zzz" filepath2="c:/yyy" /> -->
+		</folder>
+	</folders>
+	
+	<!-- 默认输出文件名为filesAttribute-2013-03-08.log -->
+	<onefile> 
+		<filesAttribute output="c:/fileAttrResult.txt">
+			<file name="file1" url="c:/exam1.xml" />
+			<file name="file2" url="c:/exam1.xml" />
+		</filesAttribute>
+	</onefile>
+
+	<xmlfiles>
+		<!-- 默认输出文件名为filesCompare-2013-03-08.log -->
+		<filesCompare output="c:/fileCompareResult.txt">
+			<fileGroup>
+				<!--配置要对比的两个文件件路径(绝对路径)： -->
+				<filePath1>c:/exam1.xml</filePath1>
+				<filePath2>c:/exam2.xml</filePath2>
+				<!-- 要比较的属性的节点名称 -->
+				<element name="student">
+					<!-- 要比较的属性的名称（0个或多个） -->
+					<attribute name="examid"></attribute>
+					<attribute name="idcard"></attribute>
+				</element>
+				<element name="name">
+				</element>
+			</fileGroup>
+		</filesCompare>
+	</xmlfiles>
+	<propertiesfile>
+	</propertiesfile>
+	<htmfile>
+	</htmfile>
+	<jsfile>
+	</jsfile>
+</config>
+

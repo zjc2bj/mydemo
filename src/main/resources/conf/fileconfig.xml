@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="fileconfig.xsd">
+
+<!-- ---------------配置两个要比较文件的信息---------------- -->
+	<!--配置要对比的两个文件件路径： -->
+	<filePath1>c:/exam1.xml</filePath1>
+	<filePath2>c:/exam2.xml</filePath2>
+	
+	<!-- 要比较的属性的节点名称 -->
+	<element name="student">
+		<!-- 要比较的属性的名称（0个或多个） -->
+		<attribute name="examid"></attribute>
+		<attribute name="idcard"></attribute>
+	</element>
+	
+<!-- ------------------配置文件比较结果   对应的输出路径------- -->	
+	<!-- 配置 (默认) 输出路径 -->
+	<defaultPath>c:/result.log</defaultPath>
+	
+	<!-- 配置文件名对应的指定路径-->
+	<file name="groovy.xml">
+		<resultPath>/result.log</resultPath>
+	</filename>
+	<file name="magicConfig.xml">
+		<resultPath>/result.log</resultPath>
+	</filename>
+	<file name="LogWriter.java">
+		<resultPath>/result.log</resultPath>
+	</filename>
+</config>
+

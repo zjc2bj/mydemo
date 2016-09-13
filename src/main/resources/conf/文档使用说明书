@@ -1,0 +1,124 @@
+fileconfig2.xml 为比较两个文件信息 以及获取文件属性的配置文件
+ 
+一、	具体配置说明如下：
+	<defaultOutputPath>c:/111.txt</defaultOutputPath> 
+			为文件比较结果的默认输出路径 （在为配置输出路径时  默认选择此路径 输出结果）
+			
+			
+	--------------- 获取文件属性 比较文件是否代表同一个文件的配置-----------------------------
+	<onefile> 
+		<filesAttribute output="">	output为比较的结果的输出路径 为空时会将<defaultOutputPath>中的路径作为输出路径
+			<file name="file1" url="c:/exam1.xml" />	name要获得属性的文件名 (可任取)   url文件的绝对路径
+			<file name="file2" url="c:/exam2.xml" />	该节点可配置多个   在输出文本中  显示    文件名和对应的属性值
+		</filesAttribute>
+	</onefile>
+	
+
+	-------------------------要比较的xml的文件配置（可比较多组）-----------------------------	
+	<xmlfiles>
+			<filesCompare output="">	output为比较的结果的输出路径	 为空时会将<defaultOutputPath>中的路径作为输出路径
+				<fileGroup>			该节点为一组待比较的文件的配置    该节点配置多个 表示多组文件对比
+					<filePath1>c:/exam1.xml</filePath1>		配置要对比的两个文件件路径
+					<filePath2>c:/exam2.xml</filePath2>		配置要对比的两个文件件路径
+					
+					<element name="student">		
+							要比较的属性的节点名称 ,如果不同层级的节点名称又重复 则在节点上加上父节点名称 
+							用 .分割 如： 本节点的表示	xmlfiles.filesCompare.element
+						<attribute name="examid"></attribute>	要比较的属性的名称（0个或多个）
+						<attribute name="idcard"></attribute>
+					</element>
+				</fileGroup>
+			</filesCompare>
+		</xmlfiles>
+	
+	以下配置内容待扩展:	
+		<propertiesfile>
+		</propertiesfile>
+		<htmfile>
+		</htmfile>
+		<jsfile>
+		</jsfile>
+		
+		
+二、示例配置：
+	<?xml version="1.0" encoding="utf-8" ?>
+	<config>
+		<defaultOutputPath>c:/111.txt</defaultOutputPath>
+		
+		<onefile> 
+			<filesAttribute output="">
+				<file name="file1" url="c:/111.xml" />
+				<file name="file2" url="d:/222.xml" />
+				<file name="file3" url="e:/333.xml" />
+				...
+			</filesAttribute>
+		</onefile>
+	
+				
+		<xmlfiles>
+			<filesCompare output="">
+				<fileGroup>
+					<filePath1>c:/exam1.xml</filePath1>
+					<filePath2>d:/exam2.xml</filePath2>
+					
+					<element name="xml.student.class.student">
+						<attribute name="examid"></attribute>
+						<attribute name="idcard"></attribute>
+						...
+					</element>
+				</fileGroup>
+				<fileGroup>
+					<filePath1>e:/ee.xml</filePath1>
+					<filePath2>e:/ff.xml</filePath2>
+					
+					<element name="class">
+						<attribute name="name"></attribute>
+					</element>
+					...
+				</fileGroup>
+				...
+				...
+			</filesCompare>
+		</xmlfiles>
+		
+		<propertiesfile>
+		</propertiesfile>
+		<htmfile>
+		</htmfile>
+		<jsfile>
+		</jsfile>
+	</config>
+
+
+三、漏洞说明：
+	<xml>
+		<student>
+			<class>
+				<student name="aaa" age="11"/>
+				<student name="bbb" age="22"/>
+			</class>
+			<class>
+				<student name="ccc" age="33"/>
+			</class>
+		</student>
+	</xml>
+	与
+	<xml>
+		<student>
+			<class>
+				<student name="aaa" age="11"/>
+			</class>
+			<class>
+				<student name="bbb" age="22"/>
+				<student name="ccc" age="33"/>
+			</class>
+		</student>
+	</xml>
+	相比较
+	
+	当配置文件的内容为：
+	<element name="xml.student.class.student">
+		<attribute name="name"></attribute>
+		<attribute name="age"></attribute>
+	</element>
+	比较结果 :两个文件内容一致

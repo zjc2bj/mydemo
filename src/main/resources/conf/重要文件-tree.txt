@@ -1,0 +1,19 @@
+petrocard-appserver-1.7.2-5.war
+    │  index.html
+    │  login.html
+    │  
+    ├─script
+    │  └─app
+    │          project.js
+    │          
+    └─WEB-INF
+        └─classes
+            │  ehcache.xml
+            │  hibernate.properties
+            │  log4j.properties
+            │  
+            └─conf
+                    groovy.xml
+                    magicConf.xml
+                    magicDb.xml
+                    

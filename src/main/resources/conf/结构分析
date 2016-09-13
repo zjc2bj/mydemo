@@ -1,0 +1,24 @@
+fileconfig.xml  	--DB层
+	每个节点 == 数据库中的表
+	
+	<onefile/>		普通的file
+		<filesAttribute output="/app/log/system">
+			<file name="" url=""/>
+	<xmlfiles/>		xml文件
+		<filesCompare output="/app/log/system">
+			<fileGroup>
+				<filePath1>c:/exam1.xml</filePath1>
+				<filePath2>c:/exam2.xml</filePath2>
+				<element name=" xml.student ">
+					<attribute name="examid"></attribute>
+					<attribute name="idcard"></attribute>
+				</element>
+	<propfile/>		properties文件
+	<htmlfile/>		html文件
+	<jsfile/>		js文件
+
+
+FileConfigAnalysis	--DAO层
+	
+
+XmlCompare	--service层

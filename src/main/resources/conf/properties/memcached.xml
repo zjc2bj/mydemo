@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<memcached>
+    
+    <client name="MCache" compressEnable="true" defaultEncoding="UTF-8" socketpool="pool0">
+        <errorHandler>com.bcs.common.memcached.CacheErrorHandler</errorHandler>
+    </client>
+    
+    <socketpool name="pool0" failover="true" initConn="5" minConn="5" maxConn="250" maintSleep="0"
+        nagle="false" socketTO="3000" aliveCheck="true">
+        <servers>192.168.7.136:3009</servers>
+    </socketpool> 
+    
+</memcached>
