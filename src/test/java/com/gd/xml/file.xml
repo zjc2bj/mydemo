@@ -1,0 +1,48 @@
+<xml>
+	<student>
+		<class>
+			<student>
+				<name />
+				<age />
+			</student>
+			<student>
+				<name />
+				<age />
+			</student>
+		</class>
+		<class>
+			<student>
+				<name />
+				<age />
+			</student>
+			<student>
+				<name />
+				<age />
+			</student>
+		</class>
+		<adress/>
+	</student>
+	<student>
+		<class>
+			<student>
+				<name />
+				<age />
+			</student>
+			<student>
+				<name />
+				<age />
+			</student>
+		</class>
+		<class>
+			<student>
+				<name />
+				<age />
+			</student>
+			<student>
+				<name />
+				<age />
+			</student>
+		</class>
+		<adress/>
+	</student>
+</xml>

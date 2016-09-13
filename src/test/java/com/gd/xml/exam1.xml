@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<exam>
+	<student examid="444" idcard="333">
+		<name>李四</name>
+		<location>大连</location>
+		<grade>97</grade>
+	</student>
+	<student examid="0910" idcard="413456">
+		<name>王五2</name>
+		<location>河南</location>
+		<grade>76.0</grade>
+	</student>
+	<student examid="0910" idcard="413456">
+		<name>王五3</name>
+		<location>河南</location>
+		<grade>76.0</grade>
+	</student>
+	<student examid="0910" idcard="413456">
+		<name>王五</name>
+		<location>河南</location>
+		<grade>76.0</grade>
+	</student>
+	<student examid="0910" idcard="413456">
+		<name>王五</name>
+		<location>河南</location>
+		<grade>76.0</grade>
+	</student>
+	<student examid="0910" idcard="413456">
+		<name>王五</name>
+		<location>河南</location>
+		<grade>76</grade>
+	</student>
+</exam>
